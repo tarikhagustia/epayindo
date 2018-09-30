@@ -2,9 +2,9 @@ Epayindo
 ===============
 
 
-Midtrans :heart: PHP!
+Epayindo :heart: PHP!
 
-This is warapper/Library for epayindo (http://epayindo.com) payment gateway, for more information visiti documentation page (https://documenter.getpostman.com/view/263410/RWEnoc52#0eb2f98c-2fb1-49a6-89dd-415626c28c74)
+This is warapper/Library for epayindo (http://epayindo.com) payment gateway, for more information visit documentation page (https://documenter.getpostman.com/view/263410/RWEnoc52#0eb2f98c-2fb1-49a6-89dd-415626c28c74)
 
 ## 1. Installation
 
