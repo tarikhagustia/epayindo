@@ -20,7 +20,7 @@ composer require tarikhagustia/epayindo
 
 ```php
 $auth = new Auth('MERCHANT_EMAIL', 'MERCHANT_API_KEY');
-$payment = new Payment($class);
+$payment = new Payment($auth);
 $total_amount = 45000;
 $payment_data = $payment->createPayment('MERCHANT_USERNAME', $total_amount, [
   ['name', 45000,1,45000]
