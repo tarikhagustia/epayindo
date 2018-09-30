@@ -11,7 +11,7 @@ This is warapper/Library for epayindo (http://epayindo.com) payment gateway, for
 ### 1. Composer Installation
 
 ```
-composer require tarikhagustia/epayindo
+composer require tarikhagustia/epayindo "dev-master"
 ```
 
 ## 2. How to Use
