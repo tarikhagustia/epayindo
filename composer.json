@@ -1,12 +1,12 @@
 {
     "name": "tarikhagustia/epayindo",
-    "description": "Boilerplate package for creating other packages.",
-    "keywords": ["template", "composer", "package"],
+    "description": "PHP client library for epayindo http://epayindo.com",
+    "keywords": ["payment-gateway", "epay", "epayindo"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Darwin Biler",
-            "email": "buonzz@gmail.com"
+            "name": "Tarikh Agustia",
+            "email": "agustia.tarikh150@gmail.com"
         }
     ],
     "type": "project",
@@ -14,7 +14,7 @@
 		    "php": ">=5.6"
     },
     "require-dev": {
-		"phpunit/phpunit": "6.*"
+		    "phpunit/phpunit": "6.*"
     },
     "autoload": {
         "psr-4": {
