@@ -8,7 +8,9 @@ class Token {
     protected $expired_at;
 
     public function __construct(){
-        session_start();
+      if (session_status() == PHP_SESSION_NONE) {
+          session_start();
+      }        
     }
     /**
      * @return mixed

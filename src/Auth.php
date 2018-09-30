@@ -7,6 +7,10 @@ class Auth {
     public function __construct(string $email, string $api_key){
         $this->email = $email;
         $this->api_key = $api_key;
+        if (!$email || !$api_key) {
+          // code...
+          throw new \Exception("email and api key not falid", 1);
+        }
     }
 
     public function getAccessToken() : Token {
