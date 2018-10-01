@@ -16,7 +16,7 @@ composer require tarikhagustia/epayindo "dev-master"
 
 ## 2. How to Use
 
-### 2.1 General Settings
+### 2.1 Create Payment
 
 ```php
 $auth = new Auth('MERCHANT_EMAIL', 'MERCHANT_API_KEY');
@@ -51,5 +51,28 @@ print_r($payment_data);
 //             [gross_amount] => 51500
 //         )
 //
+// )
+```
+
+### 2.1 Transfer to other epayindo accounts
+
+```php
+<?php
+require __DIR__ . '/../vendor/autoload.php';
+
+use Epayindo\Auth;
+use Epayindo\Transfer;
+$auth = new Auth('MERCHANT_EMAIL', 'MERCHANT_API_KEY');
+
+$transfer = new Transfer($auth);
+$amount = 10;
+$res = $transfer->to('MERCHANT_RECEIVER_USERNAME', $amount, 'Note Example')->send();
+
+print_r($res);
+// stdClass Object
+// (
+//     [message] => Maaf, tidak cukup dana untuk melakukan operasi
+//     [success] =>
+//     [code] => 401
 // )
 ```
