@@ -22,7 +22,8 @@ class Payment {
             'merchant_receiver' => $merchant_username,
             'basket' => $basket_string,
             'amount' => $amount,
-            'email' => $client_email
+            'email' => $this->auth->getEmail(),
+            'customer_email' => $client_email,
         ];
         $response = Api::post('/payment', $payload);
 
