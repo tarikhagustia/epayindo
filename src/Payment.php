@@ -12,7 +12,7 @@ class Payment {
         $this->token = $auth->getAccessToken();
     }
 
-    public function createPayment($merchant_username,float $amount, array $basket){
+    public function createPayment($merchant_username, $client_email, float $amount, array $basket){
         $basket_string = '';
         foreach ($basket as $key => $item) {
             $basket_string .= implode(',', $item).';';
@@ -22,7 +22,7 @@ class Payment {
             'merchant_receiver' => $merchant_username,
             'basket' => $basket_string,
             'amount' => $amount,
-            'email' => $this->auth->getEmail()
+            'email' => $client_email
         ];
         $response = Api::post('/payment', $payload);
 
