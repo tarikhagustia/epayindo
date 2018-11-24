@@ -6,6 +6,11 @@ class Payment {
     protected $auth;
 
     protected $token;
+    /**
+     * Option data for passing into epayindo comment (it will be use as POST data)
+     * @var array
+     */
+    protected $options = [];
 
     public function __construct(Auth $auth){
         $this->auth = $auth;
@@ -25,8 +30,23 @@ class Payment {
             'email' => $this->auth->getEmail(),
             'customer_email' => $client_email,
         ];
+        if (count($this->options) > 0) {
+            foreach ($this->options as $key => $option) {
+              $paylaod[$key] = $option;
+            }
+        }
         $response = Api::post('/payment', $payload);
 
         return $response;
+    }
+
+    /**
+     * Method to set Options
+     * @method setOption
+     * @param  array     $opts options array
+     */
+    public function setOption(array $opts){
+      $this->options = $opts;
+      return $this;
     }
 }
