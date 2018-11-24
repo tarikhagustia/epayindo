@@ -32,7 +32,7 @@ class Payment {
         ];
         if (count($this->options) > 0) {
             foreach ($this->options as $key => $option) {
-              $paylaod[$key] = $option;
+              $payload[$key] = $option;
             }
         }
         $response = Api::post('/payment', $payload);
