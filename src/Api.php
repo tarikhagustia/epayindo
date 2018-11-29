@@ -8,6 +8,7 @@ class Api {
       $base_url = $host.$end_point;
       curl_setopt($ch, CURLOPT_URL, $base_url);
       curl_setopt($ch, CURLOPT_POST, 1);
+      curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
       curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
       // receive server response ...
       curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
