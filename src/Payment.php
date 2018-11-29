@@ -45,7 +45,7 @@ class Payment {
      * @method setOption
      * @param  array     $opts options array
      */
-    public function setOption(array $opts){
+    public function setOptions(array $opts){
       $this->options = $opts;
       return $this;
     }
