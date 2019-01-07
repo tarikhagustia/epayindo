@@ -14,7 +14,7 @@ class Auth {
     }
 
     public function getAccessToken() : Token {
-        $response = Api::post('/access_token', [
+        $response = Api::post('/auth/access_token', [
           'email' => $this->email,
           'api_key' => $this->api_key
         ]);

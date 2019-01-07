@@ -35,7 +35,7 @@ class Payment {
               $payload[$key] = $option;
             }
         }
-        $response = Api::post('/payment', $payload);
+        $response = Api::post('/payment/create', $payload);
 
         return $response;
     }

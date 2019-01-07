@@ -3,7 +3,7 @@ namespace Epayindo;
 
 class Api {
   public static function post($end_point, $data){
-      $host = "https://epayindo.lalasung.com/sci";
+      $host = "https://lalasung.com/588168/api/v1";
       $ch = curl_init();
       $base_url = $host.$end_point;
       curl_setopt($ch, CURLOPT_URL, $base_url);
